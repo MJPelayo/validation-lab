@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 )
 
@@ -44,5 +45,6 @@ func main() {
 
 	http.HandleFunc("/students", createStudent)
 
+	fmt.Println("Server starting on :4000")
 	http.ListenAndServe(":4000", nil)
 }
